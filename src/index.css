@@ -464,6 +464,7 @@ FOOTER
 */
 
 footer {
+  padding: 24px 0;
   background-color: #242424;
 }
 
@@ -478,6 +479,7 @@ footer {
 
 .footer__link,
 .footer__copyright {
+  padding: 8px;
   color: #fff;
 }
 
