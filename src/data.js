@@ -3,7 +3,7 @@ export const books = [
   {
     id: 1,
     title: "Crack the Coding Interview",
-    url: "https://m.media-amazon.com/images/I/61mIq2iJUXL._AC_UF1000,1000_QL80_.jpg",
+    url: "https://m.media-amazon.com/images/I/61mIq2iJUXL._AC_UF1000,1000_QL80_.jpg", 
     originalPrice: 49.95,
     salePrice: 14.95,
     rating: 4.5,
