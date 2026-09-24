@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import EmptyCart from '../assets/empty_cart.svg'
+import EmptyCart from "../assets/empty_cart.svg"
 
 const Cart = ({ cart, changeQuantity, removeItem }) => {
     const total = () => {
@@ -28,7 +28,7 @@ const Cart = ({ cart, changeQuantity, removeItem }) => {
                             <div className="cart__body">
                                 {cart.map(book => {
                                     return (
-                                        <div className="cart__item">
+                                        <div className="cart__item" key={book.id}>
                                             <div className="cart__book">
                                                 <img
                                                     src={book.url}
@@ -65,12 +65,13 @@ const Cart = ({ cart, changeQuantity, removeItem }) => {
                             </div>
                             {cart.length === 0 && (
                                 <div className="cart__empty">
-                                <img src="{EmptyCart}" alt="" className="cart__empty--img" />
-                                <h2>You don't have any books in your cart!</h2>
-                                <Link to="/books">
-                                    <button className="btn">Browse books</button>
-                                </Link>
-                            </div>)}
+                                    <img src="{EmptyCart}" alt="" className="cart__empty--img" />
+                                    <h2>You don't have any books in your cart!</h2>
+                                    <Link to="/books">
+                                        <button className="btn">Browse books</button>
+                                    </Link>
+                                </div>
+                            )}
                         </div>
                         {cart.length  > 0 && <div className="total">
                             <div className="total__item total__sub-total">
